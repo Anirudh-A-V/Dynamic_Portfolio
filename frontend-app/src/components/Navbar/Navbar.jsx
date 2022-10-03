@@ -29,11 +29,11 @@ const Navbar = () => {
 
         {toggle && (
 
-          // <motion.div
-          //   whileInView={{ x: [300, 0] }}
-          //   transition={{ duration: 0.85, ease: 'easeOut' }}
-          //   >
-          <div>
+          <motion.div
+            whileInView={{ x: [300, 0] }}
+            transition={{ duration: 0.85, ease: 'easeOut' }}
+            >
+          {/* <div> */}
             <HiX onClick={() => setToggle(false)} />
 
             <ul>
@@ -45,8 +45,8 @@ const Navbar = () => {
               ))}
 
             </ul>
-          </div>
-          // </motion.div>
+          {/* </div> */}
+          </motion.div>
 
         )}
       </div>
