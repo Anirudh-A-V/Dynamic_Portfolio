@@ -73,7 +73,7 @@ const Skills = () => {
                       place='right'
                       effect='solid'
                       arrowColor='#fff'
-                      className='skills-tooptip'
+                      className='skills-tooltip'
                     >
                       {work.desc}
                     </ReactTooltip>
