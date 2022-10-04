@@ -23,7 +23,7 @@
     flex: 1;
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: flex-start;
 
     margin-right: 5rem;
@@ -85,11 +85,13 @@
 .app__skills-exp {
     flex: 1;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: flex-start;
     flex-direction: column;
 
     @media screen and (max-width: 900px) {
+        flex-direction: row;
+        flex-wrap: wrap;
         margin-top: 2rem;
     }
 }
