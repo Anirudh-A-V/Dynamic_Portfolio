@@ -39,7 +39,7 @@ const About = () => {
         }
       </div>
     </>
-  )
-}
+  );
+};
 
 export default AppWrap(About, 'about');
