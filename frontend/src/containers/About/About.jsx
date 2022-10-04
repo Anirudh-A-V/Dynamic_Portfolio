@@ -1,17 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import { motion } from 'framer-motion';
 
-import { images } from '../../constants';
+import { AppWrap } from '../../wrapper';
 import './About.scss'
 
-import {urlFor, client} from '../../client';
-
-// const abouts = [
-//   { title: 'Web Development', description: 'I am a good web developer.', imgUrl: images.about01 },
-//   { title: 'Web Design', description: 'I am a good designer.', imgUrl: images.about02 },
-//   { title: 'Web Animations', description: 'I am a good animator.', imgUrl: images.about03 },
-//   { title: 'Web Animations', description: 'I am a good animator.', imgUrl: images.about04 }
-// ]
+import { urlFor, client } from '../../client';
 
 const About = () => {
 
@@ -49,4 +42,4 @@ const About = () => {
   )
 }
 
-export default About
+export default AppWrap(About, 'about');
