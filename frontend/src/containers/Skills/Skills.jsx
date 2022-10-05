@@ -16,6 +16,7 @@ const Skills = () => {
     const query_skills = '*[_type == "skills"]'
 
     client.fetch(query_exp).then((res) => {
+      res.sort((a, b) => b.year - a.year)
       setExperience(res);
     })
 
