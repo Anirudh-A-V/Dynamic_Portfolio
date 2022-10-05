@@ -43,7 +43,7 @@ const Testimonials = () => {
               <p className='p-text'>{testimonial.feedback}</p>
               <div>
                 <h4 className='bold-text'>{testimonial.name}</h4>
-                <h5 className='p-text'>{testimonial.name}</h5>
+                <h5 className='p-text'>{testimonial.company}</h5>
               </div>
             </div>
           </div>
