@@ -33,7 +33,7 @@ const Testimonials = () => {
   
   return (
     <>
-      {testimonials.length > 0 && (
+      {testimonials.length >= 1  && (
         <>
           <div className='app__testimonial-item app__flex'>
             <img src={urlFor(testimonial.imgUrl)} alt={testimonial.name} />
