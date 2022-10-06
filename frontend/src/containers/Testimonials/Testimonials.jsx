@@ -4,7 +4,6 @@ import { HiChevronLeft, HiChevronRight } from 'react-icons/hi'
 
 import { AppWrap, MotionWrap } from '../../wrapper'
 import { urlFor, client } from '../../client'
-import { images } from '../../constants';
 import './Testimonials.scss'
 
 const Testimonials = () => {
@@ -38,7 +37,6 @@ const Testimonials = () => {
         <>
           <div className='app__testimonial-item app__flex'>
             <img src={urlFor(testimonial.imgUrl)} alt={testimonial.name} />
-            {/* <img src={images.profile3} alt="header" /> */}
             <div className='app__testimonial-content'>
               <p className='p-text'>{testimonial.feedback}</p>
               <div>
