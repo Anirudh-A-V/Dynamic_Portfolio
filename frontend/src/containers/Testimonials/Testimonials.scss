@@ -109,13 +109,14 @@
 
     div {
         width: 150px;
-        margin: 1.5rem;
+        margin: 2rem;
 
         img {
             width: 100%;
             height: auto;
             object-fit: cover;
             filter: grayscale(1);
+            transition: all 0.3s ease-in;
         }
 
         &:hover {
@@ -124,9 +125,9 @@
             }
         }
 
-        @media screen and (max-width: 200px) {
+        @media screen and (min-width: 2000px) {
             width: 210px;
-            margin: 2rem;
+            margin: 2.5rem;
         }
 
         @media screen and (max-width: 400px) {
