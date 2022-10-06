@@ -9,7 +9,7 @@ import './Work.scss'
 
 const Work = () => {
 
-  const [activeFilter, setActiveFilter] = useState('all')
+  const [activeFilter, setActiveFilter] = useState('All')
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 })
   const [works, setWorks] = useState([])
   const [filterWork, setFilterWork] = useState([])
