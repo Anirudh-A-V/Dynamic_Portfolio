@@ -1,15 +1,16 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { motion } from 'framer-motion';
 
 import { AppWrap } from '../../wrapper';
 import { images } from '../../constants';
+import { urlFor, client } from '../../client'
 
 import './Header.scss'
 
 const scaleVariants = {
   whileInView: {
-    scale: [0,1],
-    opacity: [0,1],
+    scale: [0, 1],
+    opacity: [0, 1],
     transition: {
       duration: 1,
       ease: 'easeInOut',
@@ -18,6 +19,24 @@ const scaleVariants = {
 }
 
 const Header = () => {
+  const [profile, setProfile] = useState([]);
+  const [primarySkills, setPrimarySkills] = useState([]);
+
+  useEffect(() => {
+    const query = '*[_type == "profile"]';
+    const query_skills = '*[_type == "primarySkills"]';
+
+    client.fetch(query).then((res) => {
+      setProfile(res);
+    });
+
+    client.fetch(query_skills).then((res) => {
+      res = res.sort((a, b) => a.priority - b.priority)
+      setPrimarySkills(res);
+    });
+
+  }, []);
+
   return (
     <div className="app__header app__flex">
       <motion.div
@@ -46,7 +65,9 @@ const Header = () => {
         transition={{ duration: 0.5, delayChildren: 0.5 }}
         className="app__header-img"
       >
-        <img src={images.profile3} alt="header" />
+        {profile.map((item, index) => (
+          <img key={index} src={urlFor(item.imgUrl)} alt="header" />
+        ))}
         <motion.img
           whileInView={{ scale: [0, 1] }}
           transition={{ duration: 1, ease: 'easeInOut' }}
@@ -61,12 +82,12 @@ const Header = () => {
         variant={scaleVariants}
         whileInView={scaleVariants.whileInView}
         className="app__header-circles"
-        >
-          {[images.python, images.react, images.node].map((circle, index) => (
-            <div className="circle-cmp app__flex" key={`circle-${index}`}>
-              <img src={circle} alt="circle" />
-            </div>
-          ))}
+      >
+        {primarySkills.map((circle, index) => (
+          <div className="circle-cmp app__flex" key={`circle-${index}`}>
+            <img src={urlFor(circle.icon)} alt="circle" />
+          </div>
+        ))}
 
       </motion.div>
     </div>
