@@ -21,6 +21,7 @@ const Skills = () => {
     })
 
     client.fetch(query_skills).then((res) => {
+      res.sort((a, b) => a.order - b.order)
       setSkills(res);
     })
   }, [])
