@@ -8,11 +8,5 @@ export default {
             title: 'Name',
             type: 'string'
         },
-        {
-            name: 'tag',
-            title: 'Tag Name',
-            type: 'reference',
-            to: { type: 'tags' },
-        }
     ]
 }
