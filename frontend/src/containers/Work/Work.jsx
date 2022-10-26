@@ -13,13 +13,20 @@ const Work = () => {
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 })
   const [works, setWorks] = useState([])
   const [filterWork, setFilterWork] = useState([])
+  const [tag, setTag] = useState([])
 
   useEffect(() => {
     const query = '*[_type == "works"]'
+    const tags = '*[_type == "tagList"]'
     client.fetch(query).then((res) => {
       setWorks(res);
       setFilterWork(res);
     })
+    client.fetch(tags).then((res) => {
+      const result = res.sort((a, b) => a.name.localeCompare(b.name))
+      setTag(result);
+    })
+
   }, [])
 
 
@@ -42,9 +49,9 @@ const Work = () => {
       <h2 className='head-text'>My Creative <span>Portfolio</span> </h2>
 
       <div className='app__work-filter'>
-        {['ReactJS', 'Django', 'Flutter', 'Python', 'Web App', 'All'].map((item, index) => (
-          <div key={index} onClick={() => handleWorkFilter(item)} className={`app__work-filter-item app__flex p-text ${activeFilter === item ? 'item-active' : ''}`}>
-            {item}
+        {tag.map((item, index) => (
+          <div key={index} onClick={() => handleWorkFilter(item.name)} className={`app__work-filter-item app__flex p-text ${activeFilter === item.name ? 'item-active' : ''}`}>
+            {item.name}
           </div>
         ))}
       </div>
