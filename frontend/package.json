@@ -16,7 +16,7 @@
     "react-scripts": "5.0.1",
     "react-tooltip": "^4.4.3",
     "sanity": "^2.33.2",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^3.0.4"
   },
   "scripts": {
     "start": "react-scripts start",
