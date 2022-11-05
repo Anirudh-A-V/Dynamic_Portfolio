@@ -1727,9 +1727,9 @@
     lodash "^4.17.15"
     rxjs "^6.5.3"
 
-"@sanity/vision@^2.34.0":
-  version "2.34.0"
-  resolved "https://registry.npmjs.org/@sanity/vision/-/vision-2.34.0.tgz"
+"@sanity/vision@^2.35.0":
+  version "2.35.0"
+  resolved "https://registry.yarnpkg.com/@sanity/vision/-/vision-2.35.0.tgz#24bbcd46c1b3bb9618cedc067b32e6ba32b9e268"
   dependencies:
     "@juggle/resize-observer" "^3.3.1"
     "@sanity/icons" "^1.3.4"
