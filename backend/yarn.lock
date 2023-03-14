@@ -1083,7 +1083,7 @@
   version "1.3.0"
   resolved "https://registry.npmjs.org/@sanity/asset-utils/-/asset-utils-1.3.0.tgz"
 
-"@sanity/base@2.35.0", "@sanity/base@^2.34.0":
+"@sanity/base@2.35.0":
   version "2.35.0"
   resolved "https://registry.yarnpkg.com/@sanity/base/-/base-2.35.0.tgz#945a0d113d2cde159ba270e304385edb73e95a37"
   dependencies:
@@ -1144,7 +1144,68 @@
     shallow-equals "^1.0.0"
     use-device-pixel-ratio "^1.1.0"
 
-"@sanity/bifur-client@^0.3.0":
+"@sanity/base@^2.35.7":
+  version "2.35.7"
+  resolved "https://registry.yarnpkg.com/@sanity/base/-/base-2.35.7.tgz#f0f411b95a31ec93b2523d33e3d39f8ed1bcd388"
+  dependencies:
+    "@juggle/resize-observer" "^3.3.1"
+    "@popperjs/core" "^2.5.4"
+    "@reach/auto-id" "^0.13.2"
+    "@sanity/asset-utils" "^1.2.5"
+    "@sanity/bifur-client" "0.3.0"
+    "@sanity/client" "^3.3.3"
+    "@sanity/color" "^2.1.14"
+    "@sanity/generate-help-url" "^3.0.0"
+    "@sanity/icons" "^1.3.4"
+    "@sanity/image-url" "^1.0.1"
+    "@sanity/initial-value-templates" "2.35.3"
+    "@sanity/mutator" "2.33.2"
+    "@sanity/schema" "2.35.0"
+    "@sanity/state-router" "2.35.3"
+    "@sanity/structure" "2.35.7"
+    "@sanity/transaction-collator" "2.35.3"
+    "@sanity/types" "2.35.0"
+    "@sanity/ui" "^0.37.22"
+    "@sanity/util" "2.35.0"
+    "@sanity/validation" "2.35.0"
+    boundless-arrow-key-navigation "^1.1.0"
+    circular-at "^1.0.3"
+    classnames "^2.2.5"
+    dataloader "^2.0.0"
+    date-fns "^2.16.1"
+    debug "^3.2.7"
+    dom-scroll-into-view "^1.2.1"
+    element-resize-detector "^1.1.14"
+    groq-js "^0.2.0"
+    history "^4.6.3"
+    json-reduce "^2.0.0"
+    lodash "^4.17.15"
+    nano-pubsub "^2.0.1"
+    nanoid "^3.1.30"
+    observable-callback "^1.0.1"
+    pluralize "^7.0.0"
+    polished "^4.0.5"
+    popper-max-size-modifier "^0.2.0"
+    raf "^3.4.1"
+    react-click-outside "^3.0.0"
+    react-fast-compare "^3.2.0"
+    react-icon-base "^2.1.2"
+    react-is "^17.0.2"
+    react-popper "^2.2.4"
+    react-props-stream "^1.0.0"
+    react-refractor "^2.1.6"
+    react-rx "^1.0.0-beta.6"
+    react-sortable-hoc "^1.11.0"
+    react-split-pane "^0.1.84"
+    refractor "^3.6.0"
+    rxjs "^6.5.3"
+    rxjs-etc "^10.6.0"
+    rxjs-exhaustmap-with-trailing "^1.2.0"
+    semver-compare "^1.0.0"
+    shallow-equals "^1.0.0"
+    use-device-pixel-ratio "^1.1.0"
+
+"@sanity/bifur-client@0.3.0", "@sanity/bifur-client@^0.3.0":
   version "0.3.0"
   resolved "https://registry.npmjs.org/@sanity/bifur-client/-/bifur-client-0.3.0.tgz"
   dependencies:
@@ -1500,6 +1561,16 @@
     lodash "^4.17.15"
     oneline "^1.0.3"
 
+"@sanity/initial-value-templates@2.35.3":
+  version "2.35.3"
+  resolved "https://registry.yarnpkg.com/@sanity/initial-value-templates/-/initial-value-templates-2.35.3.tgz#f15c60161822ea087fe49212748df2456d3e9f4a"
+  dependencies:
+    "@sanity/icons" "^1.3.4"
+    "@sanity/util" "2.35.0"
+    "@types/lodash" "^4.14.149"
+    lodash "^4.17.15"
+    oneline "^1.0.3"
+
 "@sanity/logos@^1.1.15":
   version "1.1.17"
   resolved "https://registry.npmjs.org/@sanity/logos/-/logos-1.1.17.tgz"
@@ -1637,6 +1708,14 @@
     lodash "^4.17.15"
     nano-pubsub "^2.0.1"
 
+"@sanity/state-router@2.35.3":
+  version "2.35.3"
+  resolved "https://registry.yarnpkg.com/@sanity/state-router/-/state-router-2.35.3.tgz#73315dec91e63080b04d15b4c212f75cd06698a8"
+  dependencies:
+    debug "^3.2.7"
+    lodash "^4.17.15"
+    nano-pubsub "^2.0.1"
+
 "@sanity/structure@2.35.0":
   version "2.35.0"
   resolved "https://registry.yarnpkg.com/@sanity/structure/-/structure-2.35.0.tgz#c4a3098c3bff218602dd9e56e3e8a4e03df18acd"
@@ -1649,6 +1728,18 @@
     lodash "^4.17.15"
     memoize-one "^3.1.1"
 
+"@sanity/structure@2.35.7":
+  version "2.35.7"
+  resolved "https://registry.yarnpkg.com/@sanity/structure/-/structure-2.35.7.tgz#e27183269ec9df8a5b7ed12a758096155cf0d54b"
+  dependencies:
+    "@sanity/client" "^3.3.3"
+    "@sanity/icons" "^1.3.4"
+    "@sanity/initial-value-templates" "2.35.3"
+    "@types/lodash" "^4.14.149"
+    "@types/memoize-one" "^3.1.1"
+    lodash "^4.17.15"
+    memoize-one "^3.1.1"
+
 "@sanity/timed-out@^4.0.2":
   version "4.0.2"
   resolved "https://registry.npmjs.org/@sanity/timed-out/-/timed-out-4.0.2.tgz"
@@ -1656,6 +1747,13 @@
 "@sanity/transaction-collator@2.33.2":
   version "2.33.2"
   resolved "https://registry.npmjs.org/@sanity/transaction-collator/-/transaction-collator-2.33.2.tgz"
+  dependencies:
+    "@types/lodash" "^4.14.149"
+    lodash "^4.17.15"
+
+"@sanity/transaction-collator@2.35.3":
+  version "2.35.3"
+  resolved "https://registry.yarnpkg.com/@sanity/transaction-collator/-/transaction-collator-2.35.3.tgz#d5d8d4f2eebb4bb187fcb74bef78abe9a2746eaa"
   dependencies:
     "@types/lodash" "^4.14.149"
     lodash "^4.17.15"
