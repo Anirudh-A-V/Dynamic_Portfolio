@@ -9,20 +9,20 @@
   "scripts": {
     "start": "sanity start",
     "test": "sanity check",
-    "build": "sanity build public -y"
+    "build": "sanity build"
   },
   "keywords": [
     "sanity"
   ],
   "dependencies": {
     "@sanity/base": "^2.34.0",
-    "@sanity/core": "^2.34.0",
-    "@sanity/default-layout": "^2.34.0",
-    "@sanity/default-login": "^2.34.0",
-    "@sanity/desk-tool": "^2.34.0",
+    "@sanity/core": "^2.35.0",
+    "@sanity/default-layout": "^2.35.0",
+    "@sanity/default-login": "^2.35.0",
+    "@sanity/desk-tool": "^2.35.1",
     "@sanity/eslint-config-studio": "^2.0.0",
-    "@sanity/vision": "^2.34.0",
-    "eslint": "^8.6.0",
+    "@sanity/vision": "^2.35.0",
+    "eslint": "^8.26.0",
     "prop-types": "^15.7",
     "react": "^17.0",
     "react-dom": "^17.0",
