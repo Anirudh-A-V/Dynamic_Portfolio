@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { AiFillEye, AiFillGithub } from 'react-icons/ai'
 import { motion } from 'framer-motion'
+import ReactGA from 'react-ga'
 
 import { AppWrap, MotionWrap } from '../../wrapper'
 import { urlFor, client } from '../../client'
@@ -43,6 +44,13 @@ const Work = () => {
       }
     }, 500);
   }
+
+  const handleLinkClick = (work, clickType) => {
+    ReactGA.event({
+      category:  `${clickType} link`,
+      action: `${work} : ${clickType} link clicked`,
+    })
+  }
   
   return (
     <>
@@ -76,6 +84,7 @@ const Work = () => {
                     whileHover={{ scale: [1, 0.9] }}
                     transition={{ duration: 0.25 }}
                     className="app__flex"
+                    onClick={() => handleLinkClick(work.title, 'project')}
                   >
                     <AiFillEye />
                   </motion.div>
@@ -86,6 +95,7 @@ const Work = () => {
                     whileHover={{ scale: [1, 0.9] }}
                     transition={{ duration: 0.25 }}
                     className="app__flex"
+                    onClick={() => handleLinkClick(work.title, 'code')}
                   >
                     <AiFillGithub />
                   </motion.div>
