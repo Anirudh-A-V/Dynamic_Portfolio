@@ -46,10 +46,14 @@ const Work = () => {
   }
 
   const handleLinkClick = (work, clickType) => {
-    ReactGA.event({
-      category:  `${clickType} link`,
-      action: `${work} : ${clickType} link clicked`,
+    window.gtag('event', `${clickType} link clicked`, {
+      'event_category': `${clickType} link`,
+      'event_label': `${work} : ${clickType} link clicked`,
     })
+    // ReactGA.event({
+    //   category:  `${clickType} link`,
+    //   action: `${work} : ${clickType} link clicked`,
+    // })
   }
   
   return (

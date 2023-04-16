@@ -46,11 +46,16 @@ const Footer = () => {
       message: message,
     };
 
-    ReactGA.event({
-      category: 'Contact',
-      action: 'Contact Form Submitted',
-    });
+    // ReactGA.event({
+    //   category: 'Contact',
+    //   action: 'Contact Form Submitted',
+    // });
 
+    window.gtag('event', 'Contact Form Submitted', {
+      'event_category': 'Contact',
+      'event_label': 'Contact Form Submitted',
+    })
+    
     client
       .create(contact)
       .then(() => {
