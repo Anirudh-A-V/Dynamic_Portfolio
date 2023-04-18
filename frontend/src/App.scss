@@ -102,6 +102,10 @@
     justify-content: flex-end;
     align-items: center;
     flex-direction: column;
+    position: fixed;
+    z-index: 1;
+    bottom: 20px;
+    left: 10px;
 
     padding: 1rem;
 
