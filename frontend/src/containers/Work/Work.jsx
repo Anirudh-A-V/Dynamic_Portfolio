@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { AiFillEye, AiFillGithub } from 'react-icons/ai'
 import { motion } from 'framer-motion'
-import ReactGA from 'react-ga'
+import ReactGA from 'react-ga4'
 
 import { AppWrap, MotionWrap } from '../../wrapper'
 import { urlFor, client } from '../../client'
@@ -46,14 +46,10 @@ const Work = () => {
   }
 
   const handleLinkClick = (work, clickType) => {
-    window.gtag('event', `${clickType} link clicked`, {
-      'event_category': `${clickType} link`,
-      'event_label': `${work} : ${clickType} link clicked`,
+    ReactGA.event({
+      category: `${clickType} link`,
+      action: `${work} : ${clickType} link clicked`,
     })
-    // ReactGA.event({
-    //   category:  `${clickType} link`,
-    //   action: `${work} : ${clickType} link clicked`,
-    // })
   }
   
   return (

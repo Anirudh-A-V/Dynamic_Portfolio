@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
 import emailjs from '@emailjs/browser';
-import ReactGA from 'react-ga';
+import ReactGA from 'react-ga4';
 
 import { AppWrap, MotionWrap } from "../../wrapper";
 import { client } from "../../client";
@@ -46,15 +46,10 @@ const Footer = () => {
       message: message,
     };
 
-    // ReactGA.event({
-    //   category: 'Contact',
-    //   action: 'Contact Form Submitted',
-    // });
-
-    window.gtag('event', 'Contact Form Submitted', {
-      'event_category': 'Contact',
-      'event_label': 'Contact Form Submitted',
-    })
+    ReactGA.event({
+      category: `Contact Form`,
+      action: `Contact Form Submitted`,
+    });
     
     client
       .create(contact)
