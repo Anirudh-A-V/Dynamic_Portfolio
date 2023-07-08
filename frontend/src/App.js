@@ -1,38 +1,18 @@
-import React, { useEffect } from 'react'
-import ReactGA from "react-ga4";
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
-import './App.scss'
-
-import { About, Footer, Header, Skills, Testimonials, Work } from './containers';
-import { Navbar } from './components';
-import { SocialMedia } from './components';
-
-const trackingId = process.env.REACT_APP_GA_TRACKING_ID;
-ReactGA.initialize(trackingId);
+import Home from './pages/Home';
+import Resume from './pages/Resume';
 
 const App = () => {
-
-  useEffect(() => {
-    ReactGA.send({
-      hitType: "pageview",
-      page: window.location.pathname,
-      title: 'Home Page'
-    });
-  }, []);
-
   return (
-    <div className='app'>
-      <Navbar />
-      <Header />
-      <About />
-      <Work />
-      <Skills />
-      <Testimonials />
-      <Footer />
-      <SocialMedia />
-
-    </div>
+    <Router>
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/resume' element={<Resume />} />
+      </Routes>
+    </Router>
   );
-}
+};
 
-export default App
+export default App;
